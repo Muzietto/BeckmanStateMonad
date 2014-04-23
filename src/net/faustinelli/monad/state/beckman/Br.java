@@ -18,7 +18,7 @@ public class Br<A> extends Tr<A> {
 		}
 		System.out.println("Branch: ");
 		left.show(level + 1);
-		left.show(level + 1);
+		right.show(level + 1);
 
 	}
 
