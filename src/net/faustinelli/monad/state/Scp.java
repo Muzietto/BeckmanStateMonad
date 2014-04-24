@@ -1,4 +1,4 @@
-package net.faustinelli.monad.state.beckman;
+package net.faustinelli.monad.state;
 
 import java.text.MessageFormat;
 

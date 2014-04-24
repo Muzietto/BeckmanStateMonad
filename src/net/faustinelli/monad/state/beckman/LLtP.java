@@ -1,5 +1,7 @@
 package net.faustinelli.monad.state.beckman;
 
+import net.faustinelli.monad.state.Scp;
+
 /**
  * Pair<Label,LabeledTree> - label is the state
  * 

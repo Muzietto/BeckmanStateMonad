@@ -1,5 +1,7 @@
 package net.faustinelli.monad.state.beckman;
 
+import net.faustinelli.monad.state.Scp;
+
 public class ManualLabeling {
 
 	public static void main(String[] args) {

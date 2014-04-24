@@ -1,4 +1,5 @@
-package net.faustinelli.monad.state.beckman;
+package net.faustinelli.monad.state;
+
 
 @FunctionalInterface
 public interface State<S, A> {
