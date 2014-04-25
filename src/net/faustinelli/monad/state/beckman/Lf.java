@@ -3,9 +3,9 @@ package net.faustinelli.monad.state.beckman;
 public class Lf<A> extends Tr<A> {
 
 	public A contents;
-	
+
 	public Lf(A contents) {
-		
+
 		this.contents = contents;
 	}
 
@@ -18,6 +18,11 @@ public class Lf<A> extends Tr<A> {
 		System.out.print("Leaf: ");
 		System.out.print(contents.toString());
 		System.out.print("\n");
+	}
+
+	@Override
+	public String toString() {
+		return "" + contents.toString() + "";
 	}
 
 }

@@ -19,7 +19,11 @@ public class Br<A> extends Tr<A> {
 		System.out.println("Branch: ");
 		left.show(level + 1);
 		right.show(level + 1);
+	}
 
+	@Override
+	public String toString() {
+		return "{" + left.toString() + "|" + right.toString() + "}";
 	}
 
 }

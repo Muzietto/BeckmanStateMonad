@@ -2,14 +2,14 @@ package net.faustinelli.monad.state;
 
 import java.text.MessageFormat;
 
-public class Scp<S,A> {
+public class Scp<S, A> {
 
 	public S state;
 	public A content;
 
-	public Scp(S i,A t) {
-		this.state = i;
-		this.content = t;
+	public Scp(S state, A content) {
+		this.state = state;
+		this.content = content;
 	}
 
 	@Override
