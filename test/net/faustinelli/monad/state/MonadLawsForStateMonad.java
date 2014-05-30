@@ -27,7 +27,7 @@ public class MonadLawsForStateMonad {
 		
 		// The type of unit(Integer) from the type StateMonad is StateMonad<Object,Integer>, 
 		// this is incompatible with the descriptor's return type: StateMonad<Integer,B>
-		//StateMonad<Integer, Integer> result = ma.bind(StateMonad::unit);
+		//StateMonad<Integer, Integer> result = ma.bind(StateMonad::UNIT);
 	}
 
 	/**
