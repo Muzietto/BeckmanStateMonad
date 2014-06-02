@@ -28,8 +28,7 @@ import net.faustinelli.monad.state.StateMonad;
 		result.show(2);
 	}
 
-	private static StateMonad<Integer, Tr<Scp<Integer, String>>> MkM(
-			Tr<String> t) {
+	private static StateMonad<Integer, Tr<Scp<Integer, String>>> MkM(Tr<String> t) {
 
 		/**
 		 * n -> (n+1,n) : Integer -> (Integer,Integer)
@@ -54,9 +53,9 @@ import net.faustinelli.monad.state.StateMonad;
 		} else if (t instanceof Br<?>) {
 			/**
 			 * do
-			 *  leftSM <- MkM(t.left)
-			 *  rightSM <- MkM(t.right) 
-			 * return (Br leftSM rightSM)
+			 *  leftDLB <- MkM(t.left)
+			 *  rightDLB <- MkM(t.right) 
+			 * return (Br leftDLB rightDLB)
 			 */
 			Br<String> br = (Br<String>) t;
 			Tr<String> oldLeft = br.left;
@@ -65,12 +64,12 @@ import net.faustinelli.monad.state.StateMonad;
 			return
 
 			MkM(oldLeft)
-					.bind((Tr<Scp<Integer, String>> leftSM) -> MkM(oldRight)
-							.bind((Tr<Scp<Integer, String>> rightSM) -> new StateMonad<Integer, Tr<Scp<Integer, String>>>(
+					.bind((Tr<Scp<Integer, String>> leftDLB) -> MkM(oldRight)
+							.bind((Tr<Scp<Integer, String>> rightDLB) -> new StateMonad<Integer, Tr<Scp<Integer, String>>>(
 										(Integer s) -> new Scp<Integer, Tr<Scp<Integer, String>>>(
 													s,
 													new Br<Scp<Integer, String>>(
-															leftSM, rightSM)))));
+															leftDLB, rightDLB)))));
 
 		} else {
 			throw new RuntimeException("Lab/Label: impossible tree subtype");
