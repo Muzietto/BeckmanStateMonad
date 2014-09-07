@@ -1,5 +1,5 @@
 BeckmanStateMonad - RELEASE 1.0
-========================
+===============================
 This is a Java 8 porting of the C# code prepared by Brian Beckman for his lesson about the state monad.
 The example involves traversing a binary tree with String leaves and substituting each String with an Integer, each time incremented by one.
 
@@ -31,3 +31,6 @@ I am in debt with:
 - http://en.wikibooks.org/wiki/Haskell/Understanding_monads/State
 
 Any feedback is welcome.
+
+--------------------------
+Released under MIT License.
